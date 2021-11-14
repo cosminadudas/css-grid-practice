@@ -1,21 +1,40 @@
 body {
-    text-align: center;
-    margin: auto;
-    background-color: rgb(185, 198, 236);
+  text-align: center;
+  margin: auto;
+  background-color: rgb(185, 198, 236);
 }
 
 ul {
-    width: 80%;
-    height: 80%;
-    background-color: rgb(247, 167, 158);
-    margin: 50px auto;
+  width: 800px;
+  height: 80%;
+  background-color: rgb(247, 167, 158);
+  margin: 50px auto;
+  /* Step 1: adding display: grid to the container element */
+  display: grid;
+  /* Step 2: GRID-TEMPLATE-COLUMNS property allows us to predefine a specific column count inside of our grid */
+  /* Step 3: We have to define a value for each column we want to create and each value should describe the width that the current column will ocupy in the grid */
+  grid-template-columns: 1fr 1fr;
+  /* Step 4: We can specify the gap/distance between our elements (the first value=the gap between the rows; the second value=the gap between the columns*/
+  gap: 100px 200px
 }
 
 li {
-    background-color: rgb(80, 114, 146);
-    margin: 10px auto;
-    width: 60%;
-    padding: 10px;
-    list-style: none;
-    display: inline-block;
+  background-color: rgb(80, 114, 146);
+  padding: 10px;
+  list-style: none;
+  display: inline-block;
+}
+
+/* with :first-of-type -> select the first item that is inside the unordered list */
+li:first-of-type{
+    background-color: seagreen;
+}
+
+/* with :nth-of-type(<number>) -> select the <number>th element from the list */
+li:nth-of-type(3){
+    background-color: sienna;
+    /* position current element to the grid */
+    /* with grid-column, we choose how many columns should the current element occupy */
+    /* start at column 1 + span tells us how many columns should this elemnet occupy */
+    grid-column: 1 / span 2; 
 }
