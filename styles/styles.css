@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    margin: auto;
+    background-color: rgb(185, 198, 236);
+}
+
+ul {
+    width: 80%;
+    height: 80%;
+    background-color: rgb(247, 167, 158);
+    margin: 50px auto;
+}
+
+li {
+    background-color: rgb(80, 114, 146);
+    margin: 10px auto;
+    width: 60%;
+    padding: 10px;
+    list-style: none;
+    display: inline-block;
+}
